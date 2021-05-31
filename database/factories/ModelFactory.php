@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Hash;
 /*
 |--------------------------------------------------------------------------
 | Model Factories
@@ -11,9 +13,51 @@
 |
 */
 
+/**
+ * Factory definition for model Role.
+ */
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
-        'email' => $faker->email,
+        'email' => $faker->unique()->email,
+        'password' => Hash::make('123456')
+    ];
+});
+
+
+
+/**
+ * Factory definition for model Category.
+ */
+$factory->define(Category::class, function ($faker) {
+    return [
+        // Fields here
+    ];
+});
+
+/**
+ * Factory definition for model Post.
+ */
+$factory->define(Post::class, function ($faker) {
+    return [
+        // Fields here
+    ];
+});
+
+/**
+ * Factory definition for model Tag.
+ */
+$factory->define(Tag::class, function ($faker) {
+    return [
+        // Fields here
+    ];
+});
+
+/**
+ * Factory definition for model Comment.
+ */
+$factory->define(Comment::class, function ($faker) {
+    return [
+        // Fields here
     ];
 });
