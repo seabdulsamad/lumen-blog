@@ -16,7 +16,7 @@ php artisan migrate
 
 Run the database seed to fill up some data into users tables. The default user password is 123456
 <pre>
-php db:seed
+php artisan db:seed
 </pre>
 
 Run the application on your machine using the following command.
