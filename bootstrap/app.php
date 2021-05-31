@@ -70,6 +70,7 @@ $app->routeMiddleware([
     'auth' => App\Http\Middleware\Authenticate::class,
     'jwt.auth' => Tymon\JWTAuth\Http\Middleware\Authenticate::class,
     'jwt.refresh' => Tymon\JWTAuth\Http\Middleware\RefreshToken::class,
+    'Nord\Lumen\Cors\CorsMiddleware',
 ]);
 
 /*
@@ -87,6 +88,8 @@ $app->register(App\Providers\AppServiceProvider::class);
 $app->register(App\Providers\AuthServiceProvider::class);
 $app->register(App\Providers\EventServiceProvider::class);
 $app->register(Tymon\JWTAuth\Providers\LumenServiceProvider::class);
+$app->register('Nord\Lumen\Cors\CorsServiceProvider');
+
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes
