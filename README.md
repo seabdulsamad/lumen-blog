@@ -21,7 +21,7 @@ php db:seed
 
 Run the application on your machine using the following command.
 <pre>
-    php -S localhost:8000 -t public
+php -S localhost:8000 -t public
 </pre>
 
 The implementation of the following API will be available over [here](https://lumen-blog.web.app) after a while.
